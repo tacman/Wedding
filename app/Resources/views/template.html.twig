@@ -103,16 +103,16 @@
 				<div class="ornament_top"></div>
 
 				<time class="date" datetime="2012-12-23">
-					Sat, May 12, '12
+					May 12, 2012
 				</time>
 
 				<div class="time">
 					<time datetime="2012-05-12" class="dtstart">
-						07.30 PM
+						7:30 PM
 					</time>
 					-
 					<time datetime="2012-05-12" class="dtend">
-						12.00 midnight
+						midnight
 					</time>
 				</div>
 				<div class="location">
@@ -123,7 +123,7 @@
         <br />
 				<div class="location">
 					Reception at  University Club, 1135 16th Street NW
-					<a class="fancybox" title=" University Club, 1135 16th Street NW, Washington, DC 20005"
+					<a class="fancybox" title="University Club, 1135 16th Street NW, Washington, DC 20005"
 					  target='_blank' href="http://maps.google.com/maps?hl=en&gs_upl=&ix=sea&ion=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&biw=1280&bih=841&um=1&ie=UTF-8&q=map+6th+%26+I+Synagogue+dc&fb=1&gl=us&hq=6th+%26+I+Synagogue&hnear=0x89b7c6de5af6e45b:0xc2524522d4885d2a,Washington,+DC&cid=0,0,14018148529042869218&ei=bTlJT9W5A8jz0gHg5eirDg&sa=X&oi=local_result&ct=image&ved=0CBIQ_BI">get directions</a>
 				</div>
 
@@ -139,11 +139,10 @@
 
 				<div id="slider">
 					<ul>
-						<li><a class="fancybox" title="Image caption goes here" href="images/black.jpg"><img alt="image1" src="images/image1.jpg"></a></li>
-						<li><a class="fancybox" href="images/black.jpg"><img alt="image2" src="images/image1.jpg"></a></li>
-						<li><a class="fancybox" href="images/black.jpg"><img alt="image3" src="images/image1.jpg"></a></li>
-						<li><a class="fancybox" href="images/black.jpg"><img alt="image3" src="images/image1.jpg"></a></li>
-						<li class="last"><a class="fancybox" href="images/black.jpg"><img alt="image4" src="images/image1.jpg"></a></li>
+						{% for p in photos %}
+						<li><a class="fancybox" title="{{ p.caption }}" href="{{ p.image }}" >
+						<img alt="image1" src="{{ p.image }}" width='222' height='182'></a></li>
+            {% endfor %}
 					</ul>
 				</div>
 
