@@ -1,0 +1,33 @@
+{# /usr/sites/sf/survos-standard/src/Acme/MovieBundle/Resources/views/Movie/browse.html.twig #}
+
+
+{% extends "SurvosAdminBundle::search_layout.html.twig" %}
+
+{% block results %}
+
+<table class="condensed-table bordered-table">
+
+<thead>
+  <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>IsPublished</th>
+      <th>ReleaseDate</th>
+      <th>ProducerId</th>
+    </tr>
+</thead>
+
+<tbody>
+{% for r in pager.getCurrentPageResults() %}
+<tr>
+    <td><a href="{{ path('acme_movie_Movie_edit', {'id': r.Id}) }}">{{ r.Id }}</a></td>
+    <td>{{ r.Title }}</td>
+    <td>{{ r.IsPublished }}</td>
+    <td>{{ r.ReleaseDate }}</td>
+    <td>{{ r.ProducerId }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+

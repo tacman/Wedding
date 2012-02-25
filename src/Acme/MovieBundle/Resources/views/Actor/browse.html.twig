@@ -1,0 +1,27 @@
+{# /usr/sites/sf/survos-standard/src/Acme/MovieBundle/Resources/views/Actor/browse.html.twig #}
+
+
+{% extends "SurvosAdminBundle::search_layout.html.twig" %}
+
+{% block results %}
+
+<table class="condensed-table bordered-table">
+
+<thead>
+  <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+</thead>
+
+<tbody>
+{% for r in pager.getCurrentPageResults() %}
+<tr>
+    <td><a href="{{ path('acme_movie_Actor_edit', {'id': r.Id}) }}">{{ r.Id }}</a></td>
+    <td>{{ r.Name }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+

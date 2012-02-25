@@ -1,0 +1,39 @@
+{% extends 'SurvosThemesBundle::Bootstrap/base.html.twig' %}
+
+{% block meta_title %}Admin:Rolematch{% endblock %}
+{% block site_title %}<a href="{{ path('survos_admin_index') }}">Rolematch Admin</a>{% endblock %}
+
+{% block site_menu %}
+          {# {"ancestorClass": 'dropdown', "currentClass": 'active'} #}
+      {{ knp_menu_render('SurvosAdminBundle:AdminMenuBuilder:mainMenu',
+          {"currentClass": 'active'}) }}
+
+{% endblock %}
+
+{% block admin_link %}<a href="{{ path('rolematch_index') }}">Live Site</a>{% endblock %}
+
+
+{% block other %}
+<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="{{ path('admin_index') }}">Admin</a>
+
+			<p class="pull-right">
+    {% if is_granted('ROLE_ADMIN') %}
+			 <a href="{{ path('admin_index') }}">[admin]</a>
+		{% endif %}
+    {% if is_granted('ROLE_USER') %}
+			 <a href="{{ path('fos_user_security_logout') }}">[logout {{ app.user.username }}]</a>
+		{% else %}
+			 <a href="{{ path('fos_user_security_login') }}">[login]</a>
+			 <a href="{{ path('fos_user_registration_register') }}">[register]</a>
+		{% endif %}
+		</p>
+
+
+		</div>
+	  </div>
+	</div>
+
+{% endblock %}

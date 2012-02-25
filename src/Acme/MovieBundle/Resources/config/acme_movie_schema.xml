@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" namespace="Acme\MovieBundle\Model" defaultIdMethod="native">
+
+    <table name="actors" phpName="Actor">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+        <column name="name" type="varchar" required="true" primaryString="true" size="255" />
+        <index>
+            <index-column name="name" />
+        </index>
+    </table>
+
+    <table name="movies" phpName="Movie">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+        <column name="title" type="varchar" required="true" primaryString="true" size="255" />
+        <column name="is_published" type="boolean" />
+        <column name="release_date" type="date" />
+        <column name="producer_id" type="integer" required="true"  />
+        <foreign-key foreignTable="producers" onDelete="cascade" onUpdate="cascade">
+            <reference local="producer_id" foreign="id" />
+        </foreign-key>
+
+        <index>
+            <index-column name="title" />
+        </index>
+    </table>
+
+    <table name="producers" phpName="Producer">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+        <column name="name" type="varchar" required="true" primaryString="true" size="255" />
+        <column name="is_published" type="boolean" />
+        <index>
+            <index-column name="name" />
+        </index>
+    </table>
+
+    <table name="actors_movies" phpName="ActorHasMovie" isCrossRef="true">
+        <column name="actor_id" type="integer" required="true" primaryKey="true"  />
+        <column name="movie_id" type="integer" required="true" primaryKey="true"  />
+
+        <foreign-key foreignTable="actors">
+            <reference local="actor_id" foreign="id" />
+        </foreign-key>
+
+        <foreign-key foreignTable="movies">
+            <reference local="movie_id" foreign="id" />
+        </foreign-key>
+    </table>
+
+</database>

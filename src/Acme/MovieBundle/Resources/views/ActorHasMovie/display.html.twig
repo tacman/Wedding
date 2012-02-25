@@ -1,0 +1,24 @@
+{# /usr/sites/sf/survos-standard/src/Acme/MovieBundle/Resources/views/ActorHasMovie/display.html.twig #}
+
+{% extends "SurvosAdminBundle::layout.html.twig" %}
+
+{% block content %}
+
+<h3>Display ActorHasMovie</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th class="right">ActorId</th>
+      <td>{{ actorHasMovie.ActorId }}</td>
+    </tr>
+    <tr>
+      <th class="right">MovieId</th>
+      <td>{{ actorHasMovie.MovieId }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
+

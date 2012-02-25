@@ -1,0 +1,22 @@
+TacWeddingBundle:
+    resource: "@TacWeddingBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+AcmeMovieBundle:
+    resource: "@AcmeMovieBundle/Controller/"
+    type:     annotation
+    prefix:   /acme
+
+SurvosAdminBundle:
+    resource: "@SurvosAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

@@ -1,0 +1,36 @@
+{# /usr/sites/sf/survos-standard/src/Acme/MovieBundle/Resources/views/Movie/display.html.twig #}
+
+{% extends "SurvosAdminBundle::layout.html.twig" %}
+
+{% block content %}
+
+<h3>Display Movie</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th class="right">Id</th>
+      <td>{{ movie.Id }}</td>
+    </tr>
+    <tr>
+      <th class="right">Title</th>
+      <td>{{ movie.Title }}</td>
+    </tr>
+    <tr>
+      <th class="right">IsPublished</th>
+      <td>{{ movie.IsPublished }}</td>
+    </tr>
+    <tr>
+      <th class="right">ReleaseDate</th>
+      <td>{{ movie.ReleaseDate }}</td>
+    </tr>
+    <tr>
+      <th class="right">ProducerId</th>
+      <td>{{ movie.ProducerId }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
+

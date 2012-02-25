@@ -1,0 +1,28 @@
+{# /usr/sites/sf/survos-standard/src/Acme/MovieBundle/Resources/views/Producer/display.html.twig #}
+
+{% extends "SurvosAdminBundle::layout.html.twig" %}
+
+{% block content %}
+
+<h3>Display Producer</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th class="right">Id</th>
+      <td>{{ producer.Id }}</td>
+    </tr>
+    <tr>
+      <th class="right">Name</th>
+      <td>{{ producer.Name }}</td>
+    </tr>
+    <tr>
+      <th class="right">IsPublished</th>
+      <td>{{ producer.IsPublished }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
+

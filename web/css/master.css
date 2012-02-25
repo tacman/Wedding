@@ -1,0 +1,756 @@
+/* -- GENERAL -- */
+html {
+	width: 100%;
+}
+
+body {
+	background: url('../images/body_bg.jpg') top center repeat-x #637c82;
+	font-family: Georgia, serif;
+	font-size: 62.5%;
+	line-height: 150%;
+	padding: 27px 0 0 0;
+	width: 100%;
+	
+	overflow-x: hidden;
+}
+
+a {
+	color: #c88e67;
+}
+
+h1 {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.after,
+.before {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+#main {
+	overflow: hidden;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+/* -- NAVIGATION -- */
+nav {
+	background: url('../images/nav_bg.png') 50% 50% repeat-x transparent;
+	font-size: 1.4em;
+	line-height: 40px;
+	height: 38px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 46px;
+	padding: 7px 0 8px 0; 
+	position: relative;
+	width: auto;
+}
+
+nav .before {
+	background: url('../images/nav_before_bg.png') 0 0 no-repeat transparent;
+	width: 66px;
+	left: -66px;
+	top: 1px;
+}
+
+nav .after {
+	background: url('../images/nav_after_bg.png') 0 0 no-repeat transparent;
+	width: 61px;
+	right: -61px;
+	top: 1px;
+}
+
+nav li {
+	display: inline;
+	margin: 0 17px 0 0;
+}
+
+nav li.last {
+	margin: 0;
+}
+
+nav li:after {
+	color: #597278;
+	content: "♥";
+	margin-left: 17px;
+}
+
+nav li.last:after {
+	content: "";
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	-webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; -o-transition: all 0.15s ease-in-out; -ms-transition: all 0.15s ease-in-out;
+}
+
+nav a:hover {
+	color: #ffe8b0;
+}
+
+/* -- ABOUT US -- */
+#about_us {
+	background: url('../images/aboutus_bg.png') top center repeat-x;
+	height: 438px;
+	position: relative;
+}
+
+	#about_us div.before {
+		background: url('../images/aboutus_before_bg.png') 0 0 no-repeat transparent;
+		width: 63px;
+		left: -63px;
+	}
+
+	#about_us div.after {
+		background: url('../images/aboutus_after_bg.png') 0 0 no-repeat transparent;
+		width: 57px;
+		right: -57px;
+	}
+
+.man, .woman {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+
+.name {
+	display: inline-block;
+	background: url('../images/name_bg.png') 0 0 repeat-x transparent;
+	font-family: 'Love Ya Like A Sister', cursive;
+	line-height: 85px;
+	height: 85px;
+	min-width: 420px;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+}
+
+	.name .before {
+		background: url('../images/name_before_bg.png') 0 0 repeat-x transparent;
+		display: block;
+		height: 84px;
+		width: 20px;
+		position: absolute;
+		left: -19px;
+		top: 1px;
+	}
+	
+	.name .after {
+		background: url('../images/name_after_bg.png') 0 0 repeat-x transparent;
+		display: block;
+		height: 84px;
+		width: 19px;
+		position: absolute;
+		right: -18px;
+	}
+	
+.woman .name {
+	float: left;
+	position: relative;
+	left: 8px;
+	top: -10px;
+	margin: 0 -8px -10px 0;
+	-moz-transform: rotate(-1.5deg);
+}
+
+.man .name {
+	float: right;
+	right: 20px;
+	top: -10px;
+	margin: 0 0 -10px -20px;
+	-moz-transform: rotate(0.5deg);
+}
+
+.picture_holder {
+	background: url('../images/woman_photo_container.png') 50% 50% no-repeat;
+	height: 389px;
+	width: 420px;
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	top: 21px;
+}
+
+	.picture_holder img {
+		height: 100%;
+		width: 100%;
+	}
+
+	.man .picture_holder {
+		background: url('../images/man_photo_container.png') 50% 50% no-repeat;
+		left: auto;
+		right: 0;
+	}
+
+.picture {
+	position: absolute;
+	left: 62px;
+	top: 50px;
+}
+
+	.man .picture {
+		left: auto;
+		right: 58px;
+	}
+	
+	.picture .hover {
+		display: none;
+		
+		color: #f5f2ee;
+		font-size: 1.8em;
+		font-weight: bold;
+		height: 185px;
+		text-align: center;
+		padding: 155px 0 0 0;
+		width: 335px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		/* Fallback for web browsers that don't support RGBa */
+		background-color: rgb(73, 101, 109);
+		/* RGBa with 0.6 opacity */
+		background-color: rgba(73, 101, 109, 0.75);
+		/* For IE 5.5 - 7*/
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7049656d, endColorstr=#7049656d);
+		/* For IE 8*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7049656d, endColorstr=#7049656d)";
+	}
+	
+		.picture .hover span:before,
+		.picture .hover span:after {
+			display: inline-block;
+			content: " ";
+			background: url('../images/abouth_before.png') 50% 50% no-repeat;
+			height: 15px;
+			margin-right: 5px;
+			width: 26px;
+		}
+		
+		.picture .hover span:after {
+			background: url('../images/abouth_after.png') 50% 50% no-repeat;
+			margin-right: 0;
+			margin-left: 5px;
+		}
+
+.separator {
+	position: absolute;
+	left: 50%;
+	top: 176px;
+	background: url('../images/heart.png') 0 0 no-repeat;
+	text-indent: -9999px;
+	margin-left: -47px;
+	height: 74px;
+	width: 94px;
+}
+
+.getting_married {
+	position: absolute;
+	left: 50%;
+	top: 293px;
+	background: url('../images/getting_married.png') 0 0 no-repeat;
+	text-indent: -9999px;
+	margin-left: -86px;
+	height: 39px;
+	width: 173px;
+	z-index: 5;
+}
+
+#about_more {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+
+#about_more_inner {
+	padding: 75px 86px;
+	position: relative;
+	width: 408px;
+}
+
+	#about_more_inner h2 {
+		color: #586c70;
+		font-family: Georgia, serif;
+		font-size: 1.8em;
+		margin-bottom: 20px;
+	}
+	
+	#about_more_inner p {
+		color: #706358;
+		font-family: Arial;
+		font-size: 1.3em;
+		margin: 20px 0;
+	}
+	
+	#about_more_inner .she {
+		background: url('../images/about_she_bg.png') bottom center no-repeat;
+		margin-bottom: 25px;
+		padding-bottom: 33px;
+	}
+	
+	#about_more_inner .he {
+		text-align: right;
+	}
+	
+	#about_more_inner .social {
+		color: #586c70;
+		font-family: Arial;
+		text-transform: uppercase;
+	}
+	
+	#about_more_inner a {
+		font-weight: bold;
+		text-decoration: none;
+	}
+	
+		#about_more_inner a:hover {
+			text-decoration: underline;
+		}
+	
+.ornament_tl {
+	background: url('../images/fancybox_ornaments.png') left top no-repeat transparent;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.ornament_tr {
+	background: url('../images/fancybox_ornaments.png') right top no-repeat transparent;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.ornament_br {
+	background: url('../images/fancybox_ornaments.png') right bottom no-repeat transparent;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.ornament_bl {
+	background: url('../images/fancybox_ornaments.png') left bottom no-repeat transparent;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/* -- WEDDING PARTY -- */
+#wedding_party {
+	background: url('../images/weddingparty_bg.jpg') center top repeat-x;
+	border-bottom: 1px solid #a5a5a6;
+	padding-top: 110px;
+	height: 306px;
+	text-align: center;
+	position: relative;
+}
+
+	#wedding_party .before {
+		background: url('../images/weddingparty_bg.jpg') right top repeat-x;
+		border-bottom: 1px solid #a5a5a6;
+		width: 59px;
+		left: -59px;
+	}
+
+	#wedding_party .after {
+		background: url('../images/weddingparty_bg.jpg') -24px top repeat-x;
+		border-bottom: 1px solid #a5a5a6;
+		width: 53px;
+		right: -53px;
+	}
+	
+	#wedding_party h2 {
+		background: url('../images/save_the_date.png') 50% 0 no-repeat;
+		text-indent: -9999px;
+		height: 166px;
+		width: 100%;
+		position: absolute;
+		top: -66px;
+		left: 0;
+	}
+	
+	#wedding_party .date {
+		display: block;
+		color: #8a7a73;
+		font-size: 11em;
+		line-height: 100%;
+		margin: 0 0 8px 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	
+	#wedding_party .time {
+		display: block;
+		color: #655a5a;
+		font-size: 2.8em;
+		line-height: 100%;
+		margin: 0 0 8px 0;
+		text-align: center;
+	}
+	
+	#wedding_party .location {
+		background: url('../images/place_pin.png') 0 2px no-repeat transparent;
+		color: #809498;
+		font-size: 1.1em;
+		line-height: 270%;
+		margin: 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+		padding-left: 30px;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+		#wedding_party .location a {
+			font-size: 0.82em;
+			font-family: Arial;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			margin-left: 10px;
+			text-decoration: none;
+		}
+		
+		#wedding_party .location a:hover {
+			text-decoration: underline;
+		}
+
+.ornament_top {
+	background: url('../images/ornament_top.png') 50% 0 no-repeat;
+	margin: 0 auto;
+	height: 34px;
+	width: 100%;
+}
+
+.ornament_bottom {
+	background: url('../images/ornament_bottom.png') 50% 0 no-repeat;
+	margin: 9px auto 0 auto;
+	height: 34px;
+	width: 100%;
+}
+
+/* -- PHOTOS -- */
+#photos {
+	background: url('../images/photos_bg.png') 0 0 repeat;
+	height: 252px;
+	margin-bottom: 30px;
+	padding-top: 48px;
+	position: relative;
+}
+	#photos ul {
+		position: relative;
+		z-index: 2;
+	}
+	
+	#photos li {
+		background: url('../images/photo_bg.png') 0 0 no-repeat;
+		float: left;
+		padding: 15px 16px 16px 15px;
+	}
+	
+		#photos li a {
+			display: block;
+			height: 173px;
+			width: 213px;
+			overflow: hidden;
+			position: relative;
+		}
+	
+		#photos li.last {
+			margin-right: 0;
+		}
+		
+		#photos li .hover {
+			display: none;
+		
+			background: url('../images/search.png') 50% 50% no-repeat;
+			
+			/* Fallback for web browsers that don't support RGBa */
+			background-color: rgb(0, 0, 0);
+			/* RGBa with 0.6 opacity */
+			background-color: rgba(0, 0, 0, 0.6);
+			/* For IE 5.5 - 7*/
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#77000000, endColorstr=#77000000);
+			/* For IE 8*/
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#77000000, endColorstr=#77000000)";
+
+			height: 173px;
+			width: 213px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	
+	#photos img {
+		display: block;
+	}
+	
+.slider-wrapper {
+	position: relative;
+	left: -10px;
+	width: 980px;
+	overflow: hidden;
+}
+	
+body .prevButton,
+body .nextButton {
+	display: none;
+}
+	
+.prevButton {
+	background: url('../images/slider_previous.png') 0 0 no-repeat;
+	text-indent: -9999px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -59px;
+	height: 300px;
+	width: 130px;
+	z-index: 5;
+}
+
+.nextButton {
+	background: url('../images/slider_next.png') 0 0 no-repeat;
+	text-indent: -9999px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -53px;
+	height: 300px;
+	width: 130px;
+	z-index: 5;
+}
+
+	#photos .before {
+		background: url('../images/photos_bg.png') right top repeat;
+		width: 59px;
+		left: -59px;
+	}
+
+	#photos .after {
+		background: url('../images/photos_bg.png') right top repeat;
+		width: 53px;
+		right: -53px;
+	}
+
+
+/* -- CONTACT -- */
+#contact {
+	background: url('../images/contact_bg.png') 0 0 no-repeat;
+	height: 357px;
+	padding: 50px 0 0 0;
+	position: relative;
+}
+
+	#contact .before {
+		background: url('../images/contact_before_bg.png') 0 0 no-repeat;
+		width: 60px;
+		left: -60px;
+	}
+
+	#contact .after {
+		background: url('../images/contact_after_bg.png') 0 0 no-repeat;
+		width: 54px;
+		right: -54px;
+	}
+	
+	#contact h3 {
+		color: #575c5c;
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 6em;
+		line-height: 100%;
+		margin-bottom: 22px;
+		text-indent: 16px;
+	}
+	
+	#contact label {
+		display: block;
+		text-transform: uppercase;
+		height: 73px;
+		width: 362px;
+		position: relative;
+	}
+	
+	#contact span {
+		color: #a7a7a7;
+		font-size: 1.1em;
+		line-height: 76px;
+		position: relative;
+		left: 27px;
+		z-index: 2;
+	}
+	
+	#contact input {
+		background: url('../images/input_bg.png') 0 0 no-repeat transparent;
+		border: 0;
+		color: #8c8c8c;
+		display: block;
+		font-family: 'Georgia';
+		font-size: 1.4em;
+		height: 72px;
+		padding: 1px 0 0 70px;
+		width: 292px;
+		outline: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+		#contact .subject input {
+			padding: 1px 0 0 84px;
+			width: 278px;
+		}
+		
+		#contact .mail input {
+			padding: 1px 0 0 70px;
+			width: 292px;
+		}
+	
+	#contact .message {
+		background: url('../images/textarea_bg.png') 0 0 no-repeat transparent;
+		height: 143px;
+		width: 362px;
+	}
+	
+		#contact .message span {
+			vertical-align: top;
+		}
+	
+	#contact textarea {
+		border: 0;
+		color: #8c8c8c;
+		font-size: 1.4em;
+		font-family: 'Georgia';
+		height: 70px;
+		width: 300px;
+		position: absolute;
+		left: 27px;
+		top: 52px;
+		resize: none;
+		overflow: auto; /* IE scrollbar fix */
+	}
+
+	#contact textarea:focus {
+		outline: 0;
+	}
+		
+	#contact .col {
+		float: left;
+		width: 362px;
+	}
+	
+body input#submit {
+	background: url('../images/submit_bg.png') center top no-repeat;
+	text-indent: -9999px;
+	margin: 0;
+	padding: 0;
+	width: 242px;
+	position: absolute;
+	left: auto;
+	top: auto;
+	right: 0;
+	bottom: 60px;
+}
+
+body #submit:hover {
+	background-position: center bottom;
+}
+
+#rockable {
+	background: url('../images/rockable.png') 0 0 no-repeat;
+	display: block;
+	height: 14px;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 16px;
+	position: absolute;
+	bottom: 23px;
+	right: -35px;
+	z-index: 2;
+}
+
+/* -- FOOTER -- */
+footer {
+	background: url('../images/footer_bg.png') center bottom repeat-x;
+	color: #ccccca;
+	font-size: 1.1em;
+	text-align: center;
+	padding: 37px 0 52px 0;
+	position: relative;
+}
+
+	footer .before {
+		background: url('../images/footer_bg.png') right bottom repeat-x;
+		width: 60px;
+		left: -60px;
+	}
+
+	footer .after {
+		background: url('../images/footer_bg.png') left bottom repeat-x;
+		width: 60px;
+		right: -60px;
+	}
+	
+/* -- FANCYBOX -- */
+#fancybox-title-inside {
+	background: transparent;
+	color: #809498;
+	font-size: 11px;
+	margin: 0;
+	text-align: left;
+	position: relative;
+	top: -10px;
+}
+
+body #fancybox-content {
+	background: transparent;
+	border-color: transparent;
+	overflow: visible;
+}
+
+body #fancybox-title {
+	background: transparent;
+	font-family: Georgia, serif;
+}
+
+body #fancybox-outer {
+	background: url('../images/fancybox_bg.jpg') 0 0 transparent;
+}
+
+body #fancybox-img {
+	display: block;
+	box-shadow: 0 0 2px 3px #cdcdcd;
+}
+
+/* -- FONTS -- */
+body .date {
+	font-family: 'Folio Condensed Bold', Impact, Arial bold, sans-serif;
+}
+body .time {
+	font-family: 'Folio Condensed Bold', Impact, Arial bold, sans-serif;
+}
+
+/* -- NAME SIZE -- */
+.woman .name {
+	font-size: 6em;
+}
+.man .name {
+	font-size: 6em;
+}

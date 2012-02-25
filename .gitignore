@@ -1,0 +1,9 @@
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/src/Survos/HR48Bundle/Resources/data/scraped_website/*.html
+/vendor/
+Thumbs.db
+
+# /app/config/parameters.ini

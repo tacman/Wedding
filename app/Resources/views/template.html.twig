@@ -1,0 +1,243 @@
+{% extends '::base.html.twig' %}
+
+{% block meta_title %}
+{{ bride }} and {{ groom }} are getting married.
+{% endblock %}
+
+{% block body %}
+<body id="index">
+
+	<!-- #main -->
+	<div id="main">
+{% block content %}
+
+		<!-- #Container -->
+		<div id="container">
+
+			<h1>{{ bride }} &amp; {{ groom }} are getting married</h1>
+
+			<!-- Navigation -->
+			<nav>
+				<div class="before"></div>
+				<ul>
+					 <li><a href="#about_us">About us</a></li>
+					 <li><a href="#gift_registry">Gift Registry</a></li>
+					 <li><a href="#photos">Photos</a></li>
+					 <li class="last"><a href="#contact">Contact</a></li>
+				</ul>
+				<div class="after"></div>
+			</nav>
+			<!-- END Navigation -->
+
+			<!-- About us -->
+			<div id="about_us">
+				<div class="before"></div>
+
+				<!-- she -->
+				<div class="woman">
+					<span class="name">
+						<span class="before"></span>
+						{{ bride_first }}
+						<span class="after"></span>
+					</span>
+
+					<div class="picture_holder">
+						<img alt="picture holder" src="images/blank.gif" usemap="#she_map">
+					</div>
+
+					<map name="she_map">
+						<area shape="circle" coords="225,189,163" href="#about_more_inner" alt="about Jane" />
+					</map>
+
+					<div class="picture">
+						<img alt="{{ bride_first }}" src="images/photo_she.jpg" width='330px' height='330px'>
+						<!-- her hover effect -->
+						<div class="hover"><span>About {{ bride_first }}</span></div>
+
+					</div>
+
+				</div>
+				<!-- END she -->
+
+				<div class="separator">
+					and
+				</div>
+
+				<!-- he -->
+				<div class="man">
+					<span class="name">
+						<span class="before"></span>
+						{{ groom_first }}
+						<span class="after"></span>
+					</span>
+
+					<div class="picture_holder">
+						<img alt="picture holder" src="images/blank.gif" usemap="#he_map">
+					</div>
+
+					<map name="he_map">
+						<area shape="circle" coords="203,189,163" href="#about_more_inner" alt="about Mike" />
+					</map>
+
+					<div class="picture">
+						<img alt="{{ groom_first }}" src="images/photo_he.jpg" width='330px' height='330px'>
+
+						<!-- his hover effect -->
+						<div class="hover"><span>About {{ groom_first }}</span></div>
+					</div>
+				</div>
+				<!-- END he -->
+
+				<div class="getting_married">
+					are getting married
+				</div>
+				<div class="after"></div>
+			</div>
+			<!-- END About us -->
+
+			<!-- Wedding party -->
+			<div id="wedding_party">
+				<div class="before"></div>
+				<h2>Save the date</h2>
+
+				<div class="ornament_top"></div>
+
+				<time class="date" datetime="2012-12-23">
+					Saturday, May 12, 2012
+				</time>
+
+				<div class="time">
+					<time datetime="2012-05-12" class="dtstart">
+						07.30 PM
+					</time>
+					-
+					<time datetime="2012-05-12" class="dtend">
+						12.00 Am
+					</time>
+				</div>
+				<div class="location">
+					6th & I Synagogue, Washington, DC
+					<a class="fancybox" title="6th & I Synagogue, Washington, DC"
+					  href="/images/map.jpg">get directions</a>
+				</div>
+
+				<div class="ornament_bottom"></div>
+
+				<div class="after"></div>
+			</div>
+			<!-- END Wedding party -->
+
+			<!-- Photos -->
+			<div id="photos">
+				<div class="before"></div>
+
+				<div id="slider">
+					<ul>
+						<li><a class="fancybox" title="Image caption goes here" href="images/black.jpg"><img alt="image1" src="images/image1.jpg"></a></li>
+						<li><a class="fancybox" href="images/black.jpg"><img alt="image2" src="images/image1.jpg"></a></li>
+						<li><a class="fancybox" href="images/black.jpg"><img alt="image3" src="images/image1.jpg"></a></li>
+						<li><a class="fancybox" href="images/black.jpg"><img alt="image3" src="images/image1.jpg"></a></li>
+						<li class="last"><a class="fancybox" href="images/black.jpg"><img alt="image4" src="images/image1.jpg"></a></li>
+					</ul>
+				</div>
+
+				<div class="after"></div>
+			</div>
+			<!-- END Photos -->
+
+			<!-- Contact -->
+			<div id="contact">
+				<div class="before"></div>
+
+				<h3>Contact us</h3>
+
+				<form action="send.php" method="post" accept-charset="utf-8">
+
+					<div class="col">
+						<label>
+							<span>Name</span>
+							<input type="text" name="name" value=" ">
+						</label>
+						<label class="subject">
+							<span>Subject</span>
+							<input type="text" name="subject" value=" ">
+						</label>
+					</div>
+
+					<div class="col">
+						<label class="mail">
+							<span>Mail</span>
+							<input type="text" name="mail" value="">
+						</label>
+						<label class="message">
+							<span>Message</span>
+							<textarea rows="4" name="message"></textarea>
+						</label>
+					</div>
+
+					<input type="submit" name="submit" value="Send message" id="submit">
+
+				</form>
+
+				<a id="rockable" href="http://themeforest.net/user/rockable/portfolio">designed and coded by Rockable</a>
+
+				<div class="after"></div>
+			</div>
+			<!-- END Contact -->
+
+			<!-- Fotter -->
+			<footer>
+				<div class="before"></div>
+				Copyright © Wedding. All rights reserved. Designed by Rockable.
+				<div class="after"></div>
+			</footer>
+			<!-- END Footer -->
+
+		</div>
+		<!-- END #Container -->
+
+	</div>
+	<!-- END #main -->
+
+	<!-- ABOUT section - this will be shown in fancybox -->
+	<div id="about_more">
+		<div id="about_more_inner">
+
+			<div class="ornament_tl"></div>
+			<div class="ornament_tr"></div>
+			<div class="ornament_br"></div>
+			<div class="ornament_bl"></div>
+
+			<!-- more about her -->
+			<div class="she">
+				<h2>About Jane</h2>
+				<p>
+					This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.  These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation.
+				</p>
+				<div class="social">
+					FIND ME ELSWHERE: <a href="#">Facebook</a> | <a href="#">Twitter</a>
+				</div>
+			</div>
+			<!-- end about her -->
+
+			<!-- more about him -->
+			<div class="he">
+				<h2>About Mike</h2>
+				<p>
+					This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.  These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation
+				</p>
+				<div class="social">
+					FIND ME ELSWHERE: <a href="#">Facebook</a> | <a href="#">Twitter</a>
+				</div>
+			</div>
+			<!-- end about him -->
+
+		</div>
+
+	</div>
+	<!-- END about section -->
+{% endblock %}
+
+</body>
+{% endblock %}
+

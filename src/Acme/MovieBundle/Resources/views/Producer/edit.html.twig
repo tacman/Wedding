@@ -1,0 +1,17 @@
+{# /usr/sites/sf/survos-standard/src/Acme/MovieBundle/Resources/views/Producer/edit.html.twig #}
+
+{% extends "SurvosAdminBundle::layout.html.twig" %}
+
+{% form_theme form 'SurvosAdminBundle:Form:fields.html.twig' %}
+
+{% block content %}
+
+<h3>Edit Producer</h3>
+
+<form action="{{ app.request.uri }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <div class="clearfix"><button type="submit" class="btn primary">Submit</button></div>
+</form>
+
+{% endblock %}
+

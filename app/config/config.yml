@@ -1,0 +1,88 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+
+framework:
+    #esi:             ~
+    #translator:      { fallback: %locale% }
+    secret:          %secret%
+    charset:         UTF-8
+    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    form:            true
+    csrf_protection: true
+    validation:      { enable_annotations: true }
+    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    default_locale:  %locale%
+    session:
+        auto_start:     true
+
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    bundles:        [ ]
+    # java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        # closure:
+        #     jar: %kernel.root_dir%/java/compiler.jar
+        # yui_css:
+        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+
+# Propel Configuration
+propel:
+    path:       "%kernel.root_dir%/../vendor/propel"
+    phing_path: "%kernel.root_dir%/../vendor/phing"
+    logging:    %kernel.debug%
+    build_properties:
+        # MySQL specific
+        propel.mysql.tableType:       InnoDB
+
+    dbal:
+#        driver:               mysql
+#        user:                 %database_user%
+#        password:             %database_password%
+#        dsn:                  mysql:host=%database_host%;dbname=%database_name%;charset=UTF8
+#        options:              {}
+#        attributes:           {}
+        default_connection:       default
+        connections:
+           default:
+               driver:             mysql
+               user:               %database_user%
+               password:           %database_password%
+               dsn:                mysql:host=%database_host%;dbname=%database_name%
+#               options:
+#                   ATTR_PERSISTENT: false
+#               attributes:
+#                   ATTR_EMULATE_PREPARES: true
+#               settings:
+#                   charset:        { value: UTF8 }
+#                   queries:        { query: 'INSERT INTO BAR ('hey', 'there')' }
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
+    spool:     { type: memory }
+
+jms_security_extra:
+    secure_controllers:  true
+    secure_all_services: false
+
+#FOS
+fos_user:
+    db_driver: propel
+    user_class: FOS\UserBundle\Propel\UserProxy
+    propel_user_class: FOS\UserBundle\Propel\User
+    firewall_name: secured_area
+fos_js_routing:
+    routes_to_expose: [ .* ]
+  

@@ -1,0 +1,32 @@
+{% extends "SurvosAdminBundle::sidebar_layout.html.twig" %}
+
+{% block title %}
+<h3>48 Hour Films{% if q is defined%} Matching '{{q}}'{% endif %}</h3>
+{% endblock %}
+
+{% block sidebar %}
+A custom search form goes here.
+{% endblock %}
+
+{% block content_menu %}<b>Content Menu in search_layout</b><hr />{% endblock %}
+
+{% block content %}
+<h3>Content</h3>
+
+{% block search_form %}
+<form action=''>
+  <input name='q' size='30'>
+  <input type='submit'>
+</form>
+{% endblock %}
+
+{% block results %}
+{% endblock %}
+
+{% block pager %}
+<div class="pagerfanta">
+    {{ pagerfanta( pager, 'twitter_bootstrap') }}
+</div>
+{% endblock %}
+
+{% endblock %}

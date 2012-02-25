@@ -1,0 +1,23 @@
+body nav .before {
+	height: 53px;
+}
+
+body #wedding_party .before {
+	height: 418px;
+}
+
+body #photos .before {
+	height: 300px;
+}
+
+body #contact input {
+	height: 44px;
+	padding-top: 28px !important;
+}
+
+body input#submit {
+	font-size: 0;
+	display:block;
+	line-height: 0;
+	height: 72px;
+}
