@@ -10,7 +10,7 @@ body {
 	line-height: 150%;
 	padding: 27px 0 0 0;
 	width: 100%;
-	
+
 	overflow-x: hidden;
 }
 
@@ -49,7 +49,7 @@ nav {
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 46px;
-	padding: 7px 0 8px 0; 
+	padding: 7px 0 8px 0;
 	position: relative;
 	width: auto;
 }
@@ -143,7 +143,7 @@ nav a:hover {
 		left: -19px;
 		top: 1px;
 	}
-	
+
 	.name .after {
 		background: url('../images/name_after_bg.png') 0 0 repeat-x transparent;
 		display: block;
@@ -152,7 +152,7 @@ nav a:hover {
 		position: absolute;
 		right: -18px;
 	}
-	
+
 .woman .name {
 	float: left;
 	position: relative;
@@ -201,10 +201,10 @@ nav a:hover {
 		left: auto;
 		right: 58px;
 	}
-	
+
 	.picture .hover {
 		display: none;
-		
+
 		color: #f5f2ee;
 		font-size: 1.8em;
 		font-weight: bold;
@@ -215,7 +215,7 @@ nav a:hover {
 		position: absolute;
 		top: 0;
 		left: 0;
-		
+
 		/* Fallback for web browsers that don't support RGBa */
 		background-color: rgb(73, 101, 109);
 		/* RGBa with 0.6 opacity */
@@ -225,7 +225,7 @@ nav a:hover {
 		/* For IE 8*/
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7049656d, endColorstr=#7049656d)";
 	}
-	
+
 		.picture .hover span:before,
 		.picture .hover span:after {
 			display: inline-block;
@@ -235,7 +235,7 @@ nav a:hover {
 			margin-right: 5px;
 			width: 26px;
 		}
-		
+
 		.picture .hover span:after {
 			background: url('../images/abouth_after.png') 50% 50% no-repeat;
 			margin-right: 0;
@@ -283,39 +283,39 @@ nav a:hover {
 		font-size: 1.8em;
 		margin-bottom: 20px;
 	}
-	
+
 	#about_more_inner p {
 		color: #706358;
 		font-family: Arial;
 		font-size: 1.3em;
 		margin: 20px 0;
 	}
-	
+
 	#about_more_inner .she {
 		background: url('../images/about_she_bg.png') bottom center no-repeat;
 		margin-bottom: 25px;
 		padding-bottom: 33px;
 	}
-	
+
 	#about_more_inner .he {
 		text-align: right;
 	}
-	
+
 	#about_more_inner .social {
 		color: #586c70;
 		font-family: Arial;
 		text-transform: uppercase;
 	}
-	
+
 	#about_more_inner a {
 		font-weight: bold;
 		text-decoration: none;
 	}
-	
+
 		#about_more_inner a:hover {
 			text-decoration: underline;
 		}
-	
+
 .ornament_tl {
 	background: url('../images/fancybox_ornaments.png') left top no-repeat transparent;
 	height: 80px;
@@ -375,7 +375,7 @@ nav a:hover {
 		width: 53px;
 		right: -53px;
 	}
-	
+
 	#wedding_party h2 {
 		background: url('../images/save_the_date.png') 50% 0 no-repeat;
 		text-indent: -9999px;
@@ -385,7 +385,7 @@ nav a:hover {
 		top: -66px;
 		left: 0;
 	}
-	
+
 	#wedding_party .date {
 		display: block;
 		color: #8a7a73;
@@ -395,7 +395,7 @@ nav a:hover {
 		text-align: center;
 		text-transform: uppercase;
 	}
-	
+
 	#wedding_party .time {
 		display: block;
 		color: #655a5a;
@@ -404,7 +404,7 @@ nav a:hover {
 		margin: 0 0 8px 0;
 		text-align: center;
 	}
-	
+
 	#wedding_party .location {
 		background: url('../images/place_pin.png') 0 2px no-repeat transparent;
 		color: #809498;
@@ -418,7 +418,7 @@ nav a:hover {
 		zoom: 1;
 		*display: inline;
 	}
-	
+
 		#wedding_party .location a {
 			font-size: 0.82em;
 			font-family: Arial;
@@ -427,7 +427,7 @@ nav a:hover {
 			margin-left: 10px;
 			text-decoration: none;
 		}
-		
+
 		#wedding_party .location a:hover {
 			text-decoration: underline;
 		}
@@ -458,13 +458,13 @@ nav a:hover {
 		position: relative;
 		z-index: 2;
 	}
-	
+
 	#photos li {
 		background: url('../images/photo_bg.png') 0 0 no-repeat;
 		float: left;
 		padding: 15px 16px 16px 15px;
 	}
-	
+
 		#photos li a {
 			display: block;
 			height: 173px;
@@ -472,16 +472,16 @@ nav a:hover {
 			overflow: hidden;
 			position: relative;
 		}
-	
+
 		#photos li.last {
 			margin-right: 0;
 		}
-		
+
 		#photos li .hover {
 			display: none;
-		
+
 			background: url('../images/search.png') 50% 50% no-repeat;
-			
+
 			/* Fallback for web browsers that don't support RGBa */
 			background-color: rgb(0, 0, 0);
 			/* RGBa with 0.6 opacity */
@@ -497,23 +497,23 @@ nav a:hover {
 			top: 0;
 			left: 0;
 		}
-	
+
 	#photos img {
 		display: block;
 	}
-	
+
 .slider-wrapper {
 	position: relative;
 	left: -10px;
 	width: 980px;
 	overflow: hidden;
 }
-	
+
 body .prevButton,
 body .nextButton {
 	display: none;
 }
-	
+
 .prevButton {
 	background: url('../images/slider_previous.png') 0 0 no-repeat;
 	text-indent: -9999px;
@@ -570,7 +570,7 @@ body .nextButton {
 		width: 54px;
 		right: -54px;
 	}
-	
+
 	#contact h3 {
 		color: #575c5c;
 		font-family: 'Love Ya Like A Sister', cursive;
@@ -579,7 +579,7 @@ body .nextButton {
 		margin-bottom: 22px;
 		text-indent: 16px;
 	}
-	
+
 	#contact label {
 		display: block;
 		text-transform: uppercase;
@@ -587,7 +587,7 @@ body .nextButton {
 		width: 362px;
 		position: relative;
 	}
-	
+
 	#contact span {
 		color: #a7a7a7;
 		font-size: 1.1em;
@@ -596,7 +596,7 @@ body .nextButton {
 		left: 27px;
 		z-index: 2;
 	}
-	
+
 	#contact input {
 		background: url('../images/input_bg.png') 0 0 no-repeat transparent;
 		border: 0;
@@ -605,34 +605,34 @@ body .nextButton {
 		font-family: 'Georgia';
 		font-size: 1.4em;
 		height: 72px;
-		padding: 1px 0 0 70px;
+		padding: 1px 0 0 120px;
 		width: 292px;
 		outline: 0;
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
-	
+
 		#contact .subject input {
 			padding: 1px 0 0 84px;
 			width: 278px;
 		}
-		
+
 		#contact .mail input {
-			padding: 1px 0 0 70px;
+			padding: 1px 0 0 110px;
 			width: 292px;
 		}
-	
+
 	#contact .message {
 		background: url('../images/textarea_bg.png') 0 0 no-repeat transparent;
 		height: 143px;
 		width: 362px;
 	}
-	
+
 		#contact .message span {
 			vertical-align: top;
 		}
-	
+
 	#contact textarea {
 		border: 0;
 		color: #8c8c8c;
@@ -650,12 +650,12 @@ body .nextButton {
 	#contact textarea:focus {
 		outline: 0;
 	}
-		
+
 	#contact .col {
 		float: left;
 		width: 362px;
 	}
-	
+
 body input#submit {
 	background: url('../images/submit_bg.png') center top no-repeat;
 	text-indent: -9999px;
@@ -707,7 +707,7 @@ footer {
 		width: 60px;
 		right: -60px;
 	}
-	
+
 /* -- FANCYBOX -- */
 #fancybox-title-inside {
 	background: transparent;

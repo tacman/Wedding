@@ -156,27 +156,27 @@
 
 				<h3>Contact us</h3>
 
-				<form action="send.php" method="post" accept-charset="utf-8">
+				<form action="{{ path('wedding_contact_send') }}" method="post" accept-charset="utf-8">
 
 					<div class="col">
 						<label>
-							<span>Name</span>
+							<span>Your Name</span>
 							<input type="text" name="name" value=" ">
 						</label>
-						<label class="subject">
-							<span>Subject</span>
-							<input type="text" name="subject" value=" ">
+						<label class="mail">
+							<span>Your e-mail</span>
+							<input type="text" name="email" value="">
 						</label>
 					</div>
 
 					<div class="col">
-						<label class="mail">
-							<span>Mail</span>
-							<input type="text" name="mail" value="">
+						<label class="subject">
+							<span>Subject</span>
+							<input type="text" name="subject" value=" ">
 						</label>
 						<label class="message">
 							<span>Message</span>
-							<textarea rows="4" name="message"></textarea>
+							<textarea rows="5" name="message"></textarea>
 						</label>
 					</div>
 

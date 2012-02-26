@@ -46,4 +46,25 @@ class DefaultController extends Controller
 
         return $params;
     }
+
+    /**
+     * @Route("/send", name="wedding_contact_send")
+     * @Template("TacWeddingBundle:Default:response.html.twig")
+     */
+    public function sendAction()
+    {
+    $request = $this->getRequest();
+
+    $message = \Swift_Message::newInstance()
+        ->setSubject('Wedding Message: ' . $request->request->get('subject', "Subject"))
+        ->setFrom($request->request->get('email', ''))
+        ->setTo('tacman@gmail.com')
+        ->setBody($this->renderView('TacWeddingBundle:Default:email.txt.twig',
+          array('message' => $request->request->get('message', 'MESSAGE'))))
+    ;
+    $this->get('mailer')->send($message);
+
+    return array('response'=>"Message sent.");
+    }
+
 }
