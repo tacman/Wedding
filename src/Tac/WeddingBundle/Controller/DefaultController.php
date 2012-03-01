@@ -58,7 +58,8 @@ class DefaultController extends Controller
     $message = \Swift_Message::newInstance()
         ->setSubject('Wedding Message: ' . $request->request->get('subject', "Subject"))
         ->setFrom($request->request->get('email', ''))
-        ->setTo('tacman@gmail.com')
+        ->setTo('linda.g.greenberg@gmail.com')
+        ->setCc('tacman@gmail.com')
         ->setBody($this->renderView('TacWeddingBundle:Default:email.txt.twig',
           array('message' => $request->request->get('message', 'MESSAGE'))))
     ;
