@@ -656,6 +656,33 @@ body .nextButton {
 		width: 362px;
 	}
 
+.block {
+	background: url('../images/weddingparty_bg.jpg') center top repeat-x;
+	border-bottom: 1px solid #a5a5a6;
+	padding-top: 110px;
+	text-align: center;
+	position: relative;
+}
+
+.block h3 {
+		color: #575c5c;
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 6em;
+		line-height: 100%;
+		margin-bottom: 22px;
+		text-indent: 16px;
+	}
+
+.block li {
+		color: #575c5c;
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 3em;
+		line-height: 100%;
+		margin-bottom: 22px;
+		text-indent: 16px;
+	}
+
+
 body input#submit {
 	background: url('../images/submit_bg.png') center top no-repeat;
 	text-indent: -9999px;
