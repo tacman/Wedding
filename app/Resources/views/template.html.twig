@@ -193,11 +193,14 @@
 			<!-- Gift Registry -->
 <div id="gift_registry" class='block'>
 <h3>Gift Registry</h3>
+<li>Coming soon!</li>
+{#
 <ul>
 <li><a target='_blank' href='http://www1.macys.com/registry/wedding/guest/?registryId=741560'>Macys</a></li>
 <li><a  target='_blank' href="http://www.williams-sonoma.com/registry/2973746/registry-list.html">Williams-Sonoma</a></li>
 <li><a  target='_blank' href="http://www.bedbathandbeyond.com/regGiftRegistry.asp?wrn=-1153187847">Bed, Bath, Beyond</a></li>
 </ul>
+#}
 				<div class="after"></div>
 </div>
 			<!-- END Gift Registry -->
@@ -207,7 +210,7 @@
 			<!-- Fotter -->
 			<footer>
 				<div class="before"></div>
-				Copyright © Wedding. All rights reserved. Designed by Rockable.
+				<small>Template Design by Rockable, available on ThemeForest.net</small>
 				<div class="after"></div>
 			</footer>
 			<!-- END Footer -->
@@ -229,29 +232,32 @@
 
 			<!-- more about her -->
 			<div class="she">
-<h2>Linda G. Greenberg</h3>
+			  {% block about_her %}
+<h2>About the Bride</h3>
 <p>
-Linda’s hometown is Buzzards Bay, Massachusetts. As a teenager, she was a lifeguard and would catch lobsters with her father along the Cape Cod Canal. She comes from a big Jewish family, and is the sixth out of seven children. She graduated from the University of Massachusetts with two undergraduate degrees (Political Science and Education/Human Services). After college, Linda did a VISTA-type experience, working with Navajo elders in Flagstaff, Arizona for a couple of years. While in Flagstaff, she led hiking trips in the Grand Canyon and river trips down the Colorado River. She moved to DC and worked as an editor and writer for a health policy journal, which inspired her to go to graduate school. In 1991, she left DC to pursue a doctoral degree in social welfare policy at Brandeis University in Waltham, Massachusetts. Linda loved living in Boston and being able to travel home to the Cape. After she completed her dissertation in 1996, she migrated south to New York City to work at a private foundation. In 1998, Linda moved further south, by accepting a job in Baltimore at the U.S. Department of Health and Human Services (HHS), the Centers for Medicare & Medicaid Services (the same agency that gave her a grant to write her dissertation). In 2003, Linda took a sabbatical to work with Senator Kennedy’s health policy office, which motivated her to move closer to DC (to Bethesda from Baltimore).  Linda met Tac in 2005 at a Bike & Brunch barbeque and they became cycling friends. She worked, she played, and one day in 2009, she realized her interest in Tac was more than just as cycling friends. For almost 3 years, Linda and Tac have been true companions, enjoying foreign travel and every day life.  Linda moved farther south (all the way to Dupont Circle) in November 2011, and is calm and happy about how she and Tac are composing a life together.
+Dummy Text here
 </p>
 				<div class="social">
 					FIND ME ELSWHERE: <a href="http://www.facebook.com/linda.g.greenberg">Facebook</a>
 				</div>
+        {% endblock %}
 			</div>
 			<!-- end about her -->
 
 			<!-- more about him -->
 			<div class="he">
+{% block about_him %}
 				<h2>About Tac</h2>
 				<p>
 Born in Ft. Bragg N.C. to Robert and Sandy Tacelosky, he lived the life of an army brat, moving frequently, but always answered "New Jersey" to the question: "Where did you grow up?"  After getting a degree in Electrical Engineering from Villanova, he spent 10 years in San Diego, where he started MicroTac Software, which made computerized translation software.  After selling the company, he moved to Washington, DC in 1994 and spent the next phase of his life fighting Big Tobacco, including co-founding Smokefree DC, the grassroots group that was instrumental in getting the current smokefree legislation passed.  He currently spends too much time working on technology projects and hopes to someday to go into filmmaking.
 </p><p>
 He looks forward to the next phase of his life, being married to Linda, and to whatever future that may hold.
 </p>
-				</p>
 				<div class="social">
 					FIND ME ELSWHERE: <a href="http://www.facebook.com/nosmoke">Facebook</a> |
 					<a href="https://twitter.com/#!/tacmanDC">Twitter</a>
 				</div>
+{% endblock about_him %}
 			</div>
 			<!-- end about him -->
 
